@@ -1,4 +1,3 @@
-let saludo = "!Hola ";
 let nombre, apellido;
 
 do {
@@ -6,7 +5,7 @@ do {
     apellido = prompt("Ingrese su apellido").toLowerCase();
 } while (parseFloat(nombre) && parseFloat(apellido));
 
-console.log(`${saludo} ${nombre} ${apellido}!`);
+console.log(`¡Hola ${nombre} ${apellido}!`);
 
 let respuesta;
 
