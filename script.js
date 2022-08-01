@@ -17,8 +17,8 @@ do {
         console.log("Los valores no son validos.");
     }
 
-    respuesta = prompt("¿Se encuentra seguro de su respuesta o desea ingresar nuevos valores?").toLowerCase();
+    useResponde = prompt("¿Se encuentra seguro de su respuesta o desea ingresar nuevos valores?").toLowerCase();
 
-} while (respuesta != "si");
+} while (useResponde != "si");
 
 console.log(cosmetics);
