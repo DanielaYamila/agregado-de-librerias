@@ -1,24 +1,24 @@
-let respuesta;
+const cosmetico1 = new Cosmeticos("Labial", "R.E.M Beauty", 3500);
+const cosmetico2 = new Cosmeticos("Rubor", "KK", 5000);
+cosmetico1.categoria();
+console.table(cosmetico1);
+console.table(cosmetico2);
+
+let useResponde;
+
+const cosmetics = [];
 
 do {
-    function veResultados(peso, altura) {
-        console.log(peso / (altura * altura));
-    }
-
-    let peso, altura;
-
-    do {
-        peso = parseFloat(prompt("Ingrese su peso."));
-        altura = parseInt(prompt("Ingrese su altura."));
-    } while (isNaN(peso) || isNaN(altura));
-       
-    if(isNaN(peso) || isNaN(altura)) {
+    cosmetics.push(prompt("Ingrese una marca de cosmeticos que te gustaria ver en nuestra tienda.").toLowerCase());
+    cosmetics.push(prompt("Ingrese otra marca de cosmeticos que te gustaria ver en nuestra tienda.").toLowerCase());
+    cosmetics.push(prompt("Ingrese otra marca de cosmeticos que te gustaria ver en nuestra tienda.").toLowerCase());
+    
+    if (parseFloat(cosmetics)) {
         console.log("Los valores no son validos.");
     }
-    
-    veResultados(peso, altura);
-    alert(`Su indice de masa corporal es ` + peso / (altura * altura));
-    
-    respuesta = prompt("¿Desea calcula de nuevo su IMC?").toLowerCase();
-    
-} while(respuesta != "no");
+
+    respuesta = prompt("¿Se encuentra seguro de su respuesta o desea ingresar nuevos valores?").toLowerCase();
+
+} while (respuesta != "si");
+
+console.log(cosmetics);
