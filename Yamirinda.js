@@ -1,4 +1,4 @@
-class Cosmeticos {
+class Cosmetico {
     constructor(producto = "", coleccion = "", precio = 1, descuento = 1) {
         this.producto = producto;
         this.coleccion = coleccion;
@@ -6,6 +6,6 @@ class Cosmeticos {
     }
 
     categoria(){
-        console.log(`${this.producto} de ${this.coleccion} es vegano`);
+        console.log(`${this.producto} de ${this.coleccion} es origen vegano`);
     }
 }
