@@ -1,11 +1,3 @@
-let nombre;
-
-do {
-    nombre = prompt("Bienvenido, ingrese su nombre").toLowerCase();
-} while (parseFloat(nombre));
-
-alert(`Hola ${nombre}!`);
-
 const cosmetico1 = new Cosmetico("Labial Watermelon", "R.E.M Beauty", 3000);
 const cosmetico2 = new Cosmetico("Labial Gloss", "R.E.M Beauty", 2000);
 const cosmetico3 = new Cosmetico("Rubor", "KKW Beauty", 6000);
@@ -21,17 +13,33 @@ cosmetico5.envio(1700);
 
 const mercancia = [cosmetico1, cosmetico2, cosmetico3, cosmetico4, cosmetico5];
 
+const maquillaje = document.getElementById("maquillaje");
+
+mercancia.forEach(cosmetico => {
+    maquillaje.innerHTML += `
+        <div>
+            <div>
+                <input type = "checkbox">
+                <label> Agregar a favorito! </label>
+            </div>
+
+            <h6> PRODUCTO: ${cosmetico.producto} </h6>
+            <p> COLECCIÓN: ${cosmetico.coleccion} </p>
+            <p> PRECIO: $ ${cosmetico.precio} </p>
+        
+        </div>
+
+    `
+})
+
 console.log(mercancia.filter(filtMarca => filtMarca.coleccion == "R.E.M Beauty"));
 
-let useResponde;
-
-const cosmetics = [];
+let user = document.getElementById("user");
+let nameUser;
 
 do {
-    cosmetics.push(prompt("Ingrese una marca de cosmeticos que te gustaria ver en nuestra tienda.").toLowerCase());
+    nameUser = prompt("Ingrese su nombre").toLowerCase();
 
-    useResponde = prompt("¿Desea ingresar otra marca?").toLowerCase();
+} while (parseFloat(nameUser));
 
-} while (useResponde != "no");
-
-console.log(cosmetics);
+user.innerText = nameUser;

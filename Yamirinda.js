@@ -1,5 +1,5 @@
 class Cosmetico {
-    constructor(producto = "", coleccion = "", precio = 1) {
+    constructor(producto, coleccion, precio) {
         this.producto = producto;
         this.coleccion = coleccion;
         this.precio = precio;
