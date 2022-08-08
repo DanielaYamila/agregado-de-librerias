@@ -19,16 +19,11 @@ mercancia.forEach(cosmetico => {
             <h4> PRODUCTO: ${cosmetico.producto} </h4>
             <p> COLECCIÓN: ${cosmetico.coleccion} </p>
             <p> PRECIO: $ ${cosmetico.precio} </p>
-            <button class="shop" id="add${cosmetico.numero}">Comprar</button>
+            <button id="add${cosmetico.numero}">Comprar</button>
         
         </div>
 
     `
-    const button = document.getElementById(`add${cosmetico.numero}`)
-
-    button.addEventListener("click",
-        addShop(cosmetico.numero)
-    )
 })
 
 let user = document.getElementById("user");
