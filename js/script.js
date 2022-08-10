@@ -7,10 +7,13 @@ const cosmetico5 = new Cosmetico("05", "Bronzer Warm Temp", "Rare Beauty", 7500)
 const mercancia = [cosmetico1, cosmetico2, cosmetico3, cosmetico4, cosmetico5];
 
 const cards = document.getElementById("cards");
+const boton = document.getElementsByClassName("boton");
+const carrito = document.getElementById("carrito");
+const div = document.getElementById("add${cosmetico.numero");
 
 mercancia.forEach(cosmetico => {
     cards.innerHTML += `
-        <div>
+        <div id="add${cosmetico.numero}">
             <div>
                 <input id="fav" type = "checkbox">
                 <label> Agregar a favorito! </label>
@@ -19,33 +22,25 @@ mercancia.forEach(cosmetico => {
             <h4> PRODUCTO: ${cosmetico.producto} </h4>
             <p> COLECCIÓN: ${cosmetico.coleccion} </p>
             <p> PRECIO: $ ${cosmetico.precio} </p>
-            <button id="add${cosmetico.numero}">Comprar</button>
+            <button class="boton" type="submit">Comprar</button>
         
         </div>
 
     `
 })
 
-let user = document.getElementById("user");
-let nameUser;
+mercancia.forEach(elementos => {
+    carrito.innerHTML = `
+        <div id="add${elementos.numero}">
+            <h4> PRODUCTO: ${elementos.producto} </h4>
+            <p> COLECCIÓN: ${elementos.coleccion} </p>
+            <p> PRECIO: $ ${elementos.precio} </p>
+    
+        </div>
 
-do {
-    nameUser = prompt("Ingrese su nombre").toLowerCase();
-
-} while (parseFloat(nameUser));
-
-user.innerText = nameUser;
-
-const quizz = document.getElementById("quizz");
-
-const pregunta = [];
-const pregunta2 = [];
-
-quizz.addEventListener("click", () => {
-    pregunta.push(prompt("¿Le gustan nuestros productos?").toLowerCase());
-    pregunta2.push(prompt("Ayudenos a traer sus productos favoritos, ¿Cual marca de cosmeticos quiere ver en nuestra tienda?").toLowerCase());
-
+    `
 });
 
-console.log(pregunta);
-console.log(pregunta2);
+boton.addEventListener("click", () => {
+    carrito.push()
+})
