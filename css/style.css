@@ -7,17 +7,27 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: #94636f;
+    background-color: rgb(236, 185, 88);
+}
+
+.oscuro {
+    background-color: #460707;
 }
 
 a {
     display: flex;
     justify-content: center;
-    background-color: #4b3648;
+    background-color: #da7055;
     font-size: 2rem;
     list-style: none;
     color: #FCFCFA;
     text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
 section {
@@ -50,7 +60,7 @@ div {
 
 button {
     color: black;
-    background-color: #ffc9ba;
+    background-color: #da7055;
     font-size: 15px;
     font-weight: bold;
     padding: 10px 20px;
@@ -60,17 +70,5 @@ button {
 
 button:hover {
     color: #FCFCFA;
-    background-color: #4b3648;
-}
-
-a button{
-    padding-left: 100px;
-    flex-direction: initial;
-    color:  #FCFCFA;
-}
-
-#shop {
-    background-color:  #4b3648;
-    border-radius: 0;
-    border: 0 none;
+    background-color: #e43326;
 }
