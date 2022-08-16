@@ -72,3 +72,9 @@ button:hover {
     color: #FCFCFA;
     background-color: #e43326;
 }
+
+#noHayProductos {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}

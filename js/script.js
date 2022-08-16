@@ -9,19 +9,26 @@ const cosmetico8 = new Cosmetico(08, "Labial mate", "Kylie", 5500);
 
 const mercancia = [cosmetico1, cosmetico2, cosmetico3, cosmetico5, cosmetico6, cosmetico7, cosmetico8];
 
-localStorage.setItem('cosmeticos', JSON.stringify([cosmetico4]));
-
 const estilo = document.getElementById("estilo");
+let modoOscuro = false;
 
 estilo.addEventListener("click", () => {
-    document.body.classList.add("oscuro");
-    sessionStorage.getItem("oscuro")
-    sessionStorage.setItem("oscuro")
+    if(modoOscuro === false) {
+        document.body.classList.remove("claro");
+        document.body.classList.add("oscuro");
+        modoOscuro = true;
+        sessionStorage.setItem('modo', "oscuro")
+    } else {
+        document.body.classList.remove("oscuro");
+        document.body.classList.add("claro");
+        modoOscuro = false;
+        sessionStorage.setItem('modo', "claro")
+    }
 })
 
 const cards = document.getElementById("cards");
 
-mercancia.forEach(cosmetico => {
+mercancia.forEach((cosmetico, i) => {
     cards.innerHTML += `
         <div id="add${cosmetico.numero}">
             <div>
@@ -34,7 +41,7 @@ mercancia.forEach(cosmetico => {
             <h4> PRODUCTO: ${cosmetico.producto} </h4>
             <p> COLECCIÓN: ${cosmetico.coleccion} </p>
             <p> PRECIO: $ ${cosmetico.precio} </p>
-            <button class="boton" onclick="agregarCarrito(${cosmetico.numero})">Comprar</button>
+            <button id="boton${i}">Comprar</button>
         
         </div>
 
@@ -43,29 +50,28 @@ mercancia.forEach(cosmetico => {
 })
 
 const carrito = document.getElementById("carrito");
-let mensaje = carrito.innerHTML = `<div><p>NO HAY PRODUCTOS EN EL CARRITO.</p></div>`
+let mensaje = document.getElementById("noHayProductos");
 
-/*const div = document.getElementById("add${cosmetico.numero}");
+const carritoArray = []
 
-boton.addEventListener("click", () => {
-    const carrito = [];
+for(let i=0; i<mercancia.length; i++) {
 
-    if (agregarCarrito(div)){
-    mercancia.forEach(cosmetico => {
+    let cosmeticos = mercancia[i]
+
+    let boton = document.getElementById(`boton${i}`);
+    boton.addEventListener("click", () => {
+
         carrito.innerHTML += `
-            <div id="add${cosmetico.numero}">
+            <div class="borde">
                 <img src="#" alt="">
         
-                <h4> PRODUCTO: ${cosmetico.producto} </h4>
-                <p> COLECCIÓN: ${cosmetico.coleccion} </p>
-                <p> PRECIO: $ ${cosmetico.precio} </p>
+                <h4> PRODUCTO: ${cosmeticos.producto} </h4>
+                <p> COLECCIÓN: ${cosmeticos.coleccion} </p>
+                <p> PRECIO: $ ${cosmeticos.precio} </p>
                 
             </div>
-        
         `
+        mensaje.innerHTML = ""
+        carritoArray.push()
     })
-    }
-
-    carrito.push()
-})
-*/
+}
