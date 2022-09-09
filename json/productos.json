@@ -1,0 +1,73 @@
+[{
+        "id": 1,
+        "img": "https://i.pinimg.com/564x/51/8f/ba/518fba0b42c85d6570b24e4dd44da261.jpg",
+        "producto": "EFFECT MATTE BROWN",
+        "marca": "AURA X FLORENCE",
+        "cantidad": 1,
+        "precio": 3000
+    },
+    {
+        "id": 2,
+        "img": "https://i.pinimg.com/564x/f6/e3/60/f6e360196e25c5d2229af5c2a4a1d7e7.jpg",
+        "producto": "PALETTE COLORS",
+        "marca": "AURA X FLORENCE",
+        "cantidad": 1,
+        "precio": 3500
+    },
+    {
+        "id": 3,
+        "img": "https://i.pinimg.com/564x/78/07/3b/78073bbf997846a4f293a36e86c04cb3.jpg",
+        "producto": "EFFECT MATTE ARCOIRIS",
+        "marca": "AURA X FLORENCE",
+        "cantidad": 1,
+        "precio": 6000
+    },
+    {
+        "id": 4,
+        "img": "https://i.pinimg.com/564x/de/ab/d7/deabd7b1dc1462508cc9bc7f8318aa3c.jpg",
+        "producto": "CREAM SOLAR ALL DAY",
+        "marca": "AURA X FLORENCE",
+        "cantidad": 1,
+        "precio": 6000
+    },
+    {
+        "id": 5,
+        "img": "https://i.pinimg.com/564x/58/19/98/5819987a866ad26f9e593228145846f9.jpg",
+        "producto": "LIP GLOSS WARM TEMP",
+        "marca": "AURA X FLORENCE",
+        "cantidad": 1,
+        "precio": 7500
+    },
+    {
+        "id": 6,
+        "img": "https://i.pinimg.com/564x/a4/fb/50/a4fb5077853da1a6c2448847a082498c.jpg",
+        "producto": "BROUNCH VIOLET",
+        "marca": "AURA X FLORENCE",
+        "cantidad": 1,
+        "precio": 7000
+    },
+    {
+        "id": 7,
+        "img": "https://i.pinimg.com/564x/d6/af/42/d6af426488e1280ffcc09295093ab143.jpg",
+        "producto": "CANDY GLOSS VIOLET LIPS",
+        "marca": "AURA X FLORENCE",
+        "cantidad": 1,
+        "precio": 4000
+    },
+    {
+        "id": 8,
+        "img": "https://i.pinimg.com/564x/d7/35/84/d7358409287129e9b002bd15fd8051a3.jpg",
+        "producto": "GLOSS ROSE LIPS",
+        "marca": "AURA X FLORENCE",
+        "cantidad": 1,
+        "precio": 5500
+    },
+    {
+        "id": 9,
+        "img": "https://i.pinimg.com/564x/eb/b2/16/ebb216d2e8909d8f09bfa5ca8e010162.jpg",
+        "producto": "CANDY GLOSS ROSE LIPS",
+        "marca": "AURA X FLORENCE",
+        "cantidad": 1,
+        "precio": 5500
+    }
+]
